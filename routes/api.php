@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controller\AuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,11 +19,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('me',function(){
-    return [
-        'NIS' => 3103120196,
-        'Nama' => 'Rifky Puji Prasetyo',
-        'Phone' => '085725896999',
-        'Class' => 'XII RPL 6'
-    ];
-});
+Route::get('me',[AuthController::class, 'me']);
