@@ -17,3 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('me',function(){
+    return [
+        'NIS' => 3103120196,
+        'Nama' => 'Rifky Puji Prasetyo',
+        'Phone' => '085725896999',
+        'Class' => 'XII RPL 6'
+    ];
+});
